@@ -1,0 +1,70 @@
+
+/* Test	Bed Application	Resource File	    Created:  1992-06-07	*/
+/* Version 2.00				    Revised:  1992-12-02	*/
+
+
+/* Copyright ¸ 1989-1992  Prominare Inc.  All Rights Reserved.		*/
+
+#define	INCL_WINSYS
+
+#include <os2.h>
+
+#include "..\imagebtn.h"
+#include "testbed.h"
+
+/* --- Graphic Buttons Bitmaps ----------------------------------------	*/
+
+BITMAP	IDB_DEFAULT	    Default.Bmp
+BITMAP	IDB_DEFAULTDISABLED Disabled.Bmp
+BITMAP	IDB_DEFAULTDOWN	    Down.Bmp
+
+/* --- Test Bed	Application Icon --------------------------------------	*/
+
+ICON	ID_WINDOW TestBed.Ico
+
+/* --- Test Bed	Menu --------------------------------------------------	*/
+
+MENU ID_WINDOW LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+
+    SUBMENU "~File",		       IDM_FILE, MIS_TEXT
+    BEGIN
+	MENUITEM "~Test...",	       IDM_TEST, MIS_TEXT
+	MENUITEM SEPARATOR
+	MENUITEM "E~xit\tF3",	       IDM_EXIT, MIS_TEXT
+    END
+END
+
+/* --- Test Bed	Accelerator Table -------------------------------------	*/
+
+ACCELTABLE ID_WINDOW PRELOAD
+BEGIN
+    VK_F3,	IDM_EXIT, VIRTUALKEY
+END
+
+/* --- Test Dialogue --------------------------------------------------	*/
+
+DLGTEMPLATE DLG_TEST MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG "Test Dialogue", DLG_TEST, 139, 131,	192, 57, FS_NOBYTEALIGN	|
+		FS_SCREENALIGN | FS_DLGBORDER |	WS_CLIPSIBLINGS	| WS_SAVEBITS |
+		WS_VISIBLE, FCF_TITLEBAR | FCF_SYSMENU
+    BEGIN
+	CONTROL	"Exit",		       DID_OK, 75, 5, 50, 12, WC_BUTTON,
+					    BS_PUSHBUTTON | WS_TABSTOP |
+					    WS_VISIBLE
+	CONTROL	"Button ~1",	       IB_BUTTON1, 15, 25, 35, 27, "ImageBtn",
+					    IS_TEXTONBTN | WS_TABSTOP |	WS_VISIBLE
+		CTLDATA	16, 0, 100, 0, 101, 0, 102, 0
+	CONTROL	"Button ~2",	       IB_BUTTON2, 58, 25, 35, 27, "ImageBtn",
+					    IS_TEXTBELOWBTN | WS_TABSTOP | WS_VISIBLE
+		CTLDATA	16, 0, 100, 0, 101, 0, 102, 0
+	CONTROL	"Button ~3",	       IB_BUTTON3, 99, 25, 35, 27, "ImageBtn",
+					    IS_TEXTBELOWBTN | WS_TABSTOP | WS_VISIBLE
+		CTLDATA	16, 0, 100, 0, 101, 0, 102, 0
+	CONTROL	"Button ~4",	       IB_BUTTON4, 136,	25, 35,	27, "ImageBtn",
+					    IS_TEXTONBTN | WS_TABSTOP |	WS_VISIBLE
+		CTLDATA	16, 0, 100, 0, 101, 0, 102, 0
+    END
+END
+

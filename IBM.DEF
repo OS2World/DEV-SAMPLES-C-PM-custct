@@ -1,0 +1,15 @@
+
+LIBRARY         ImageBtn INITGLOBAL TERMGLOBAL 
+
+DESCRIPTION	'Image Button Custom Control - 32 Bit'
+
+CODE	        MOVEABLE
+DATA	        MULTIPLE MOVEABLE
+
+STACKSIZE	0
+
+PROTMODE
+
+EXETYPE		OS2
+
+EXPORTS		ImageBtnWndProc @ 1

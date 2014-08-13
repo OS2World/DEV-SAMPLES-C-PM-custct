@@ -1,0 +1,8 @@
+option modname=ImageBtn
+format os2 dll initglobal termglobal
+segment class 'code'
+segment class 'data'
+option manyautodata
+option stub=OS2STUB.EXE
+option stack=8192
+option protmode

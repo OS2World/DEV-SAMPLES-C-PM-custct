@@ -1,0 +1,11 @@
+file ImageBtn.Obj
+name ImageBtn.Dll
+option modname=ImageBtn
+format os2 dll initglobal termglobal
+option description 'Custom Control'
+segment class 'code' loadoncall executeread noiopl nonconforming
+segment class 'data' loadoncall readwrite noiopl
+option noautodata
+option stack=0
+option protmode
+export ImageBtnWndProc.1

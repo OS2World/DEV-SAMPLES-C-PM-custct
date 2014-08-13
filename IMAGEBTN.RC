@@ -1,0 +1,20 @@
+
+/* ImageBtn DLL	Resource File	       Created:	 1992-08-09		*/
+/*				       Revised:	 1992-08-09		*/
+
+
+/* Copyright ¸ 1987-1992  Prominare Inc.  All Rights Reserved.		*/
+
+#define	INCL_WINSYS
+
+#include <os2.h>
+
+#include "imagebtn.h"
+
+CODEPAGE 850
+
+/* --- Graphic Button Bitmaps -----------------------------------------	*/
+
+BITMAP	IDB_DEFAULT	    Default.Bmp
+BITMAP	IDB_DEFAULTDISABLED Disabled.Bmp
+BITMAP	IDB_DEFAULTDOWN	    Down.Bmp
