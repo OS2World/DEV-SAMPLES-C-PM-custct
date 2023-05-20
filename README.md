@@ -1,4 +1,4 @@
-DEV-SAMPLES-PM-custct
+DEV-SAMPLES-C-PM-custct
 =====================
 
 Code for the article "Demystifying Custom Controls" from OS/2 Developer Magazine.
@@ -20,4 +20,4 @@ AUTHORS
 
 LINKS
 ===============
-* 
+* https://archive.org/details/Readme_20181018/OS2DevMag-V5N1/page/120/mode/2up
